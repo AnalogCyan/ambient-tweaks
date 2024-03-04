@@ -1,0 +1,42 @@
+/* ==UserStyle==
+@name         Ambient Tweaks
+@version      2024.03.04
+@namespace    userstyles.world/user/AnalogCyan
+@description  Misc tweaks for use with 'youtube better ambient' by dantelin2009.
+@author       AnalogCyan
+@license      The Unlicense; https://unlicense.org/
+==/UserStyle== */
+
+@-moz-document domain("youtube.com") {
+  /* Fix border radius of video background */
+  ytd-watch-flexy[flexy]:not([is-vertical-video_])
+    #player-container-inner.ytd-watch-flexy {
+    border-radius: 12px !important;
+  }
+
+  /* Fix video getting cut off in some situations */
+  /* Some ultra-wide videos still have issues for some reason... */
+  .html5-video-player .video-click-tracking,
+  .html5-video-player .video-stream {
+    height: fit-content !important;
+  }
+
+  /* Fix mixes having black bar */
+  ytd-compact-radio-renderer[collections]
+    ytd-thumbnail.ytd-compact-radio-renderer {
+    border-top: none !important;
+  }
+
+  /* Fix transparency of various elements */
+  .header.ytd-playlist-panel-renderer,
+  .playlist-items.ytd-playlist-panel-renderer,
+  ytd-playlist-panel-video-renderer[selected][use-color-palette],
+  ytd-playlist-panel-video-renderer[selected][use-color-palette]:hover:not(
+      .dragging
+    ),
+  #header.ytd-engagement-panel-title-header-renderer,
+  .html5-video-player:not(.efyt-black-bars),
+  .html5-video-player.unstarted-mode:not(.efyt-black-bars) {
+    background-color: var(--yt-spec-badge-chip-background) !important;
+  }
+}
