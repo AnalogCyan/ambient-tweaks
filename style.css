@@ -14,13 +14,6 @@
     border-radius: 12px !important;
   }
 
-  /* Fix video getting cut off in some situations */
-  /* Some ultra-wide videos still have issues for some reason... */
-  .html5-video-player .video-click-tracking,
-  .html5-video-player .video-stream {
-    height: fit-content !important;
-  }
-
   /* Fix mixes having black bar */
   ytd-compact-radio-renderer[collections]
     ytd-thumbnail.ytd-compact-radio-renderer {
