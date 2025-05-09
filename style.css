@@ -1,6 +1,6 @@
 /* ==UserStyle==
 @name         Ambient Tweaks
-@version      2024.07.19
+@version      2025.05.08
 @namespace    userstyles.world/user/AnalogCyan
 @description  Misc tweaks for use with 'youtube better ambient' by dantelin2009.
 @author       AnalogCyan
@@ -31,5 +31,19 @@
   .html5-video-player:not(.efyt-black-bars),
   .html5-video-player.unstarted-mode:not(.efyt-black-bars) {
     background-color: var(--yt-spec-badge-chip-background) !important;
+  }
+  .style-scope.ytd-watch-flexy#player-container-inner {
+    box-shadow: none !important;
+  }
+  .header.ytd-playlist-panel-renderer,
+  .playlist-items.ytd-playlist-panel-renderer,
+  ytd-playlist-panel-video-renderer[selected][use-color-palette],
+  ytd-playlist-panel-video-renderer[selected][use-color-palette]:hover:not(
+      .dragging
+    ),
+  #header.ytd-engagement-panel-title-header-renderer,
+  .html5-video-player:not(.efyt-black-bars),
+  .html5-video-player.unstarted-mode:not(.efyt-black-bars) {
+    background-color: transparent !important;
   }
 }
